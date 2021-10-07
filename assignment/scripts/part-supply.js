@@ -42,6 +42,18 @@ console.log(supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
 
+for (let i = 0; i < supplyChanges.length; i++){
+  let x = supplyChanges[i];
+  if ( x>0 ) {
+    console.log(`Added ${x} parts.`);
+  } else if (x<0) {
+    // STUDENT NOTE: It was annoying me that the console was returning "Removed -6 parts". This makes no sense in a strictly semantic sense, so I looked up how to calculate absolute value, and now here we are :)
+    console.log(`Removed ${Math.abs(x)} parts.`);
+  } else {
+    console.log('No change.');
+  }
+}
+
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
