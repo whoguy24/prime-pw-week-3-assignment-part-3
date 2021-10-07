@@ -42,6 +42,7 @@ console.log(supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
 
+// STUDENT
 for (let i = 0; i < supplyChanges.length; i++){
   let x = supplyChanges[i];
   if ( x>0 ) {
@@ -54,16 +55,48 @@ for (let i = 0; i < supplyChanges.length; i++){
   }
 }
 
-
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
 
+// STUDENT
+for (let x of supplyChanges) {
+  if ( x>0 ) {
+    console.log(`Added ${x} parts.`);
+  } else if (x<0) {
+    console.log(`Removed ${Math.abs(x)} parts.`);
+  } else {
+    console.log('No change.');
+  }
+  x++;
+}
+
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
 
+// STUDENT
+let i = 0
+while (i<supplyChanges.length) {
+  let x = supplyChanges[i];
+  if ( x>0 ) {
+    console.log(`Added ${x} parts.`);
+  } else if (x<0) {
+    console.log(`Removed ${Math.abs(x)} parts.`);
+  } else {
+    console.log('No change.');
+  }
+  i++;
+}
 
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
+
+// STUDENT
+let totalSupplies = 0
+for (let i = 0; i < supplyChanges.length; i++){
+  let x = supplyChanges[i];
+  totalSupplies = totalSupplies + x;
+}
+console.log(totalSupplies);
